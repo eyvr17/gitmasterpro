@@ -66,13 +66,14 @@ It helps you manage stars, follows, contributions, and see some stats with a sim
 
 ```
 starhub-manager/
-├── icons/
 ├── files/
+├── icons/
 ├── popup.html
 ├── popup.js
 ├── background.js
 ├── manifest.json
 ├── README.md
+├── LICENSE
 ```
 
 ---

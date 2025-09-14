@@ -22,7 +22,7 @@ It helps you manage stars, follows, contributions, and see some stats with a sim
 ## Demo
 
 <p align="center">
-    <img src="assets/demo.gif" alt="Demo" width="480"/>
+    <img src="files/demo.gif" alt="Demo" width="480"/>
 </p>
 
 ---

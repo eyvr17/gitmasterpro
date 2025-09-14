@@ -1,6 +1,6 @@
-# ⭐ StarHub Manager
+# ⭐ Git Master Pro
 
-StarHub Manager is a Chrome extension for GitHub users.  
+Git Master Pro is a Chrome extension for GitHub users.  
 It helps you manage stars, follows, contributions, and see some stats with a simple interface.
 
 <p align="center">

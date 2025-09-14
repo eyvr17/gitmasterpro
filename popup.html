@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GitHub Pro Manager</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="brand">
+        <img src="icons/icon48.png" alt="logo" class="logo" />
+        <div>
+          <h1>GitHub Pro Manager</h1>
+          <p class="tagline">Manage stars, follows, imports, analytics & contributions</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- 🔥 Tabs principales -->
+    <nav class="tabs">
+      <button data-tab="stars" class="tab active">⭐ Stars</button>
+      <button data-tab="following" class="tab">👥 Following</button>
+      <button data-tab="import" class="tab">📥 Import</button>
+      <button data-tab="tools" class="tab">🛠 Tools</button>
+      <button data-tab="analytics" class="tab">📊 Analytics</button>
+      <button data-tab="contrib" class="tab">🤝 Contribute</button>
+    </nav>
+
+    <!-- ⭐ TAB STARS -->
+    <section id="stars" class="tab-content active">
+      <div class="card">
+        <label>GitHub Username</label>
+        <input type="text" id="username" placeholder="ej: eyvr17">
+        <label>Token (optional)</label>
+        <div class="token-row">
+          <input type="password" id="token" placeholder="ghp_...">
+          <button id="getTokenLink" class="secondary">Get Token</button>
+        </div>
+        <label><input type="checkbox" id="rememberToken"> Remember token</label>
+        <button id="fetchStarsBtn" class="primary">Fetch Starred Repos</button>
+      </div>
+
+      <div class="card">
+        <label>Sort by:</label>
+        <select id="sortOrder">
+          <option value="created_at_desc">Newest</option>
+          <option value="created_at_asc">Oldest</option>
+          <option value="stars_desc">Most stars</option>
+          <option value="stars_asc">Fewest stars</option>
+        </select>
+      </div>
+
+      <div id="starredResults" class="results"></div>
+
+      <div class="actions">
+        <button id="exportBtn" class="primary">Export / Download</button>
+        <button id="copyBtn">Copy URLs</button>
+        <button id="openUrlsBtn">Open URLs</button>
+        <button id="exportSheetsBtn" class="google">Export to Google Sheets</button>
+      </div>
+    </section>
+
+    <!-- 👥 TAB FOLLOWING -->
+    <section id="following" class="tab-content">
+      <div class="card">
+        <button id="fetchFollowingBtn" class="primary">Fetch Following</button>
+        <textarea id="compareUsers" placeholder="user1,user2,user3"></textarea>
+        <button id="compareFollowingBtn">Compare Followings</button>
+        <button id="unfollowAllBtn" class="danger">Unfollow ALL</button>
+      </div>
+      <div id="followingResults" class="results"></div>
+    </section>
+
+    <!-- 📥 TAB IMPORT -->
+    <section id="import" class="tab-content">
+      <div class="card">
+        <textarea id="importText" placeholder="Paste repo URLs here..."></textarea>
+        <button id="importTextBtn" class="primary">Star These Repos</button>
+        <input type="file" id="importFileBtn" accept=".txt">
+      </div>
+    </section>
+
+    <!-- 🛠 TAB TOOLS -->
+    <section id="tools" class="tab-content">
+      <div class="card">
+        <button id="unstarAllBtn" class="danger">Unstar ALL repos</button>
+        <button id="googleAuthBtn" class="google">Authenticate Google Sheets</button>
+      </div>
+    </section>
+
+    <!-- 📊 TAB ANALYTICS -->
+    <section id="analytics" class="tab-content">
+      <div class="card">
+        <p>Coming soon: charts of languages, activity, popularity.</p>
+      </div>
+    </section>
+
+    <!-- 🤝 TAB CONTRIBUTE -->
+    <section id="contrib" class="tab-content">
+      <div class="card">
+        <button id="findContribBtn" class="primary">Find Opportunities to Contribute</button>
+        <div id="contribResults" class="results"></div>
+      </div>
+    </section>
+
+    <div id="status" class="status"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

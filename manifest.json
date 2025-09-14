@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Pro Manager - Stars, Following & Contributions",
+  "version": "1.0",
+  "description": "Advanced GitHub manager: fetch stars, export, bulk star/unstar/follow/unfollow, import repos, compare followings, analytics and find contribution opportunities.",
+  "permissions": [
+    "storage",
+    "identity",
+    "tabs",
+    "scripting",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://api.github.com/*",
+    "https://raw.githubusercontent.com/*",
+    "https://www.googleapis.com/*",
+    "https://sheets.googleapis.com/*",
+    "https://github.com/*"
+  ],
+  "oauth2": {
+    "client_id": "REPLACE_WITH_GOOGLE_OAUTH_CLIENT_ID",
+    "scopes": [
+      "https://www.googleapis.com/auth/spreadsheets",
+      "https://www.googleapis.com/auth/drive.file"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}

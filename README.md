@@ -32,8 +32,8 @@ It helps you manage stars, follows, contributions, and see some stats with a sim
 1. Clone the repo:
 
      ```bash
-     git clone https://github.com/YOUR_USERNAME/starhub-manager.git
-     cd starhub-manager
+     git clone https://github.com/eyvr17/gitmasterpro.git
+     cd gitmasterpro
      ```
 
 2. Load it in Chrome:
@@ -67,7 +67,7 @@ It helps you manage stars, follows, contributions, and see some stats with a sim
 ```
 starhub-manager/
 ├── icons/
-├── assets/
+├── files/
 ├── popup.html
 ├── popup.js
 ├── background.js
